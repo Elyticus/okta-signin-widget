@@ -1,28 +1,35 @@
 body {
-  background-color: rgba(246, 219, 81, 0.69);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .title {
-  padding: 40px;
-  font: normal 34px/1 Verdana, Geneva, sans-serif;
-  color: black;
+  padding: 1.5em 0 2em 0;
   text-align: center;
   letter-spacing: 7px;
+  font-size: 1.7em;
 }
 
 .footer {
-  font: normal 14px/1 Verdana, Geneva, sans-serif;
-  color: black;
-  position: fixed;
   bottom: 0;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 2.5em;
 }
 
 .credentials-login {
-  font-family: Verdana, Geneva, sans-serif;
   text-align: center;
   padding: 2em;
 }
@@ -31,7 +38,11 @@ body {
   padding: 0;
   margin: 0;
   border-radius: 20px !important;
-  background-color: antiquewhite !important;
+  background: linear-gradient(
+    90deg,
+    rgba(253, 245, 29, 0.182) 50%,
+    rgba(252, 176, 69, 0.532) 100%
+  );
 }
 
 .okta-sign-in-header {
@@ -39,7 +50,19 @@ body {
 }
 
 .okta-form-title {
-  color: rebeccapurple !important;
+  color: black !important;
   text-transform: uppercase !important;
   letter-spacing: 2px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+label {
+  color: black;
+}
+
+.checked {
+  border: none !important;
+  box-shadow: none !;
 }
