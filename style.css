@@ -62,7 +62,36 @@ label {
   color: black;
 }
 
+#okta-sign-in .custom-checkbox label {
+  color: rgb(32, 163, 17);
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1px;
+}
+
 .checked {
   border: none !important;
   box-shadow: none !;
+}
+
+#okta-sign-in.auth-container .button-primary {
+  color: black;
+  border: none;
+  border-radius: 10px;
+  background: rgba(24, 223, 226, 0.867);
+  font-family: "Inconsolata", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+#okta-sign-in.auth-container .button-primary:hover {
+  background: rgb(119, 255, 0);
+}
+
+/* Base container for the background component */
+.liquid-ether-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
 }
