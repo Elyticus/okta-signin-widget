@@ -1,14 +1,3 @@
-body {
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  color: white;
-  font-family: "Ubuntu", sans-serif !important;
-}
-
 .widget-container {
   display: flex;
   flex-direction: column;
@@ -22,27 +11,17 @@ body {
   font-size: 1.7em;
 }
 
-.footer {
-  bottom: 0;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .credentials-login {
   text-align: center;
   padding: 2em;
 }
 
 .auth-container {
-  padding: 0;
-  margin: 0;
+  background: rgba(17, 238, 254, 0.278) !important;
   border-radius: 20px !important;
-  background: linear-gradient(
-    90deg,
-    rgba(253, 245, 29, 0.182) 50%,
-    rgba(252, 176, 69, 0.532) 100%
-  );
+  backdrop-filter: blur(30px);
+  border: none !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.875) !important;
 }
 
 .okta-sign-in-header {
@@ -63,7 +42,6 @@ label {
 }
 
 #okta-sign-in .custom-checkbox label {
-  color: rgb(32, 163, 17);
   font-weight: bold;
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 1px;
@@ -78,13 +56,19 @@ label {
   color: black;
   border: none;
   border-radius: 10px;
-  background: rgba(24, 223, 226, 0.867);
+  background: rgba(250, 230, 19, 0.867);
   font-family: "Inconsolata", sans-serif;
   transition: all 0.2s ease-in-out;
 }
 
+#okta-sign-in.auth-container .button-primary:focus {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
 #okta-sign-in.auth-container .button-primary:hover {
-  background: rgb(119, 255, 0);
+  background: rgb(0, 0, 0);
+  color: white;
 }
 
 /* Base container for the background component */
@@ -94,4 +78,57 @@ label {
   width: 100%;
   height: 100%;
   touch-action: none;
+}
+
+#okta-sign-in.auth-container .link {
+  color: white !important;
+  text-decoration: none;
+}
+
+#okta-sign-in.auth-container .link:hover {
+  color: rgb(237, 247, 51) !important;
+  text-decoration: underline;
+}
+
+/* Increase specificity with additional classes or IDs */
+body .o-form-has-errors .infobox-error,
+#okta-sign-in .o-form-has-errors .infobox-error {
+  display: none !important;
+}
+
+#okta-sign-in .o-form-explain.o-form-input-error {
+  color: rgb(255, 82, 82);
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.focused-input {
+  display: none;
+}
+
+#okta-sign-in.auth-container input[type="submit"]:focus {
+  background-color: transparent !important;
+}
+
+#okta-sign-in.auth-container .button-primary:active {
+  background-image: none;
+  /* background-color: rgba(250, 230, 19, 0.867) !important; */
+}
+
+#okta-signin-username {
+  border-radius: 10px !important;
+}
+
+#okta-sign-in.auth-container .button-primary:active,
+#okta-sign-in.auth-container .button-primary:focus,
+#okta-sign-in.auth-container .button-primary:hover {
+  background-color: #2cc6ed !important;
+  background-image: none !important;
+  cursor: pointer;
+  color: black !important;
+}
+
+#okta-sign-in :focus {
+  outline: none !important;
 }
