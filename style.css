@@ -16,6 +16,14 @@
   padding: 2em;
 }
 
+#okta-signin-username {
+  border-radius: 10px !important;
+}
+
+span {
+  border-radius: 10px !important;
+}
+
 .auth-container {
   background: rgba(17, 238, 254, 0.278) !important;
   border-radius: 20px !important;
@@ -29,7 +37,7 @@
 }
 
 .okta-form-title {
-  color: black !important;
+  color: rgb(213, 255, 4) !important;
   text-transform: uppercase !important;
   letter-spacing: 2px;
   display: flex !important;
@@ -38,7 +46,7 @@
 }
 
 label {
-  color: black;
+  color: rgb(134, 210, 254);
 }
 
 #okta-sign-in .custom-checkbox label {
@@ -113,11 +121,6 @@ body .o-form-has-errors .infobox-error,
 
 #okta-sign-in.auth-container .button-primary:active {
   background-image: none;
-  /* background-color: rgba(250, 230, 19, 0.867) !important; */
-}
-
-#okta-signin-username {
-  border-radius: 10px !important;
 }
 
 #okta-sign-in.auth-container .button-primary:active,
